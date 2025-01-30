@@ -4,69 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website Task</title>
     <style>
-        .main {
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .header{
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+        }
+        .footer{
+            background: #333;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .container {
             display: grid;
-            grid-template-columns: 10cm 19cm 10cm;
-            grid-template-rows: 1.5cm 15cm 1.5cm;
-            /* column-gap: 20px;
-            row-gap: 20px; */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+            padding: 20px;
         }
 
-        .d1 {
-            background-color: red;
-            /* grid-column-start: 1;
-            grid-column-end: 4; */
-            grid-column: 1/4;
+        .box {
+            background: white;
             padding: 20px;
-            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            
         }
 
-        .d2 {
-            background-color: yellow;
-            /* grid-column-start: 1;
-            grid-column-end: 4; */
-            padding: 20px;
-            text-align: center;
-        }
+        .box h3 {
+            color: #4CAF50;
 
-        .d3 {
-            background-color: green;
-            /* grid-column-start: 1;
-            grid-column-end: 4; */
-            padding: 20px;
-            text-align: center;
-        }
-
-        .d4 {
-            background-color: aqua;
-            /* grid-column-start: 1;
-            grid-column-end: 4; */
-            padding: 20px;
-            text-align: center;
-        }
-
-        .d5 {
-            background-color: purple;
-            /* grid-column-start: 1;
-            grid-column-end: 4; */
-            grid-column: 1/4;
-            padding: 20px;
-            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="main">
-        <div class="d1">Header</div>
-        <div class="d2">Navigation</div>
-        <div class="d3">Main content</div>
-        <div class="d4">Sidebar</div>
-        <div class="d5">Footer</div>
+    <div class="header">Welcome to Your Website Task</div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </div>
+    <div class="container">
+        <div class="box">
+            <h3>About CSS</h3>
+            <p>CSS allows you to style and layout your webpages, adding colors, spacing, and more.</p>
+        </div>
+        <div class="box">
+            <h3>Box Model</h3>
+            <p>The CSS box model includes margins, borders, padding, and the content.</p>
+        </div>
+        <div class="box">
+            <h3>Responsive Design</h3>
+            <p>Ensures your webpage looks great on all devices.</p>
+        </div>
+    </div>
+    <div class="footer">Created by Your Name | Twitter | LinkedIn</div>
 </body>
 
 </html>
